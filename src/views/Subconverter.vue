@@ -255,7 +255,7 @@ export default {
           "自动判断客户端": "auto",
         },
         customBackend: {
-          "干饭后端": "https://suc.iganfan.xyz/sub?",
+          "干饭后端": "https://api.sub.vg/sub?",
           "sub-beta.vercel.app": "https://sub-beta.vercel.app/sub?",
           "subcon.dlj.tf(subconverter作者提供-稳定)":
             "https://subcon.dlj.tf/sub?",
@@ -264,7 +264,7 @@ export default {
           "sub.id9.cc(品云转换)": "https://sub.id9.cc/sub?",
         },
         backendOptions: [
-          { value: "https://suc.iganfan.xyz/sub?" },
+          { value: "https://api.sub.vg/sub?" },
           { value: "https://sub-beta.now.sh/sub?" },
           { value: "https://subcon.dlj.tf/sub?" },
           { value: "https://api.dler.io/sub?" },
@@ -615,19 +615,7 @@ export default {
       let sourceSub = this.form.sourceSubUrl;
       sourceSub = sourceSub.replace(/(\n|\r|\n\r)/g, "|");
 
-      // 薯条屏蔽
-      if (sourceSub.indexOf("losadhwse") !== -1 && (backend.indexOf("py6.pw") !== -1 || backend.indexOf("subconverter-web.now.sh") !== -1 || backend.indexOf("subconverter.herokuapp.com") !== -1 || backend.indexOf("api.wcc.best") !== -1)) {
-        this.$alert('此机场订阅已将该后端屏蔽，请自建后端转换。', '转换错误提示', {
-          confirmButtonText: '确定',
-          callback: action => {
-            this.$message({
-              type: 'error',
-              message: `action: ${ action }`
-            });
-          }
-        });
-        return false;
-      }
+      // 薯条屏蔽个头
 
       this.customSubUrl =
         backend +
