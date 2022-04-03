@@ -285,7 +285,7 @@ export default {
             label: "ACL4SSR",
             options: [
 							{
-                label: "ACL4SSR_Online_Full_NoAuto.ini 全分组 无自动测速 重度用户使用(与Github同步) F1、链式代理自建规则",
+                label: "ACL4SSR_Online_Full_NoAuto.ini 全分组 无自动测速 重度用户使用(与Github同步) F1、TikTok、链式代理自建规则",
                 value:
                   "https://raw.githubusercontent.com/OliverGrace/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_NoAuto.ini"
               },
